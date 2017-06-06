@@ -1,0 +1,13 @@
+<?php
+    require("./../../vendor/yiisoft/yii2/web/interfaces.php");
+    $address = isset($_GET['address']) ? $_GET['address'] : '北京';
+    // $address = '北京';
+    $interfaces = new \yii\web\Interfaces();
+    $weather = json_decode($interfaces->weather($address));//json格式 需转义
+
+    echo "<pre>";
+    var_dump($weather);die;
+
+
+ 
+?>

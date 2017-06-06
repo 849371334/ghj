@@ -1,0 +1,57 @@
+<?php
+    require("./../../vendor/yiisoft/yii2/web/interfaces.php");
+    $company = isset($_GET['company']) ? $_GET['company'] : '';
+    $numbers = isset($_GET['numbers']) ? $_GET['numbers'] : '';
+    // $address = '北京';
+    // $word = '没问题';
+        $company = '中通';//快递公司编码不能为中文
+        $numbers = '437251635537';//单号
+        switch ($company)
+        {
+            case '申通':
+                $company = 'STO';
+                break;
+            case '圆通':
+                $company = 'YTO';
+                break;
+            case '中通':
+                $company = 'ZTO';
+                break;
+            case '韵达':
+                $company = 'YUNDA';
+                break;
+            case '顺丰':
+                $company = 'SF';
+                break;
+            case '邮政':
+                $company = 'EMS';
+                break;
+            case '优速':
+                $company = 'UC';
+                break;
+            case '天天':
+                $company = 'TTK';
+                break;
+            default:
+        }
+        $interfaces = new \yii\web\Interfaces();
+        $express = json_decode($interfaces->express($company,$numbers));//json格式 需转义
+
+    echo "<pre>";
+    var_dump($express);die;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+?>

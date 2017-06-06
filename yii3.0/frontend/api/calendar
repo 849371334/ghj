@@ -1,0 +1,26 @@
+<?php
+    require("./../../vendor/yiisoft/yii2/web/interfaces.php");
+
+    $date = date('Ymd', time());//必须为yyyyMMdd格式日期 例：20150423
+    $interfaces = new \yii\web\Interfaces();
+    $date = json_decode($interfaces->calendar($date));//json格式 需转义
+
+
+    echo "<pre>";
+    var_dump($date);die;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+?>

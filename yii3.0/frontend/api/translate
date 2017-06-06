@@ -1,0 +1,26 @@
+<?php
+    require("./../../vendor/yiisoft/yii2/web/interfaces.php");
+    $word = isset($_GET['word']) ? $_GET['word'] : '北京';
+    // $address = '北京';
+    // $word = '没问题';
+    $interfaces = new \yii\web\Interfaces();
+    $words = json_decode($interfaces->translate($word));//json格式 需转义
+
+    echo "<pre>";
+    var_dump($words);die;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+?>

@@ -1,0 +1,2 @@
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '=many+20000 where user_id=1' at line 1
+The SQL being executed was: update zhuan  many=many+20000 where user_id=1</br>2017-04-23 09:03:59</br>

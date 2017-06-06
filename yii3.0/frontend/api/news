@@ -1,0 +1,25 @@
+<?php
+    require("./../../vendor/yiisoft/yii2/web/interfaces.php");
+    $new = isset($_GET['new']) ? $_GET['new'] : '北京';
+    // $address = '北京';
+    $interfaces = new \yii\web\Interfaces();
+    $new = json_decode($interfaces->news());//json格式 需转义
+
+    echo "<pre>";
+    var_dump($new);die;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+?>
